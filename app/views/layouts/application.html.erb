@@ -19,7 +19,7 @@
   				<li><a href="#">Dostawa i płatności</a></li>
   				<li><a href="#">O sklepie</a></li>
   			</ul>
-  	</div>  	
+  	</div>
   </nav>
 
   <div class="container-fluid">
@@ -27,18 +27,18 @@
   		<div class="col-md-2">
   			<h3>Kategorie</h3>
   			<ul class="nav nav-sidebar">
-  				<% (1..9).each do |category| %>
+  				<% Category.all.each do |category| %>
 					<li>
-						<%= link_to "Kategoria#{category}", category_path(category) %>
+						<%= link_to category.name, category_path(category) %>
 					</li>
-  				<% end %>	
+  				<% end %>
   			</ul>
   		</div>
   		<div class="col-md-10">
   			<%= yield %>
-  		</div> 		
-  	</div>  	
+  		</div>
+  	</div>
   </div>
- 
+
 </body>
 </html>
