@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resource :cart, controller: "cart", only: [:show, :edit, :update] do
+  resource :cart, controller: "cart", only: [:show, :update, :edit] do
     member do
       post :add_product
       post :remove_product
+      get  :confirmation
+      post :finish
     end
   end
 
