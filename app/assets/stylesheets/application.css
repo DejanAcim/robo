@@ -15,7 +15,6 @@
  */
 
 @import "bootstrap";
-@import "bootstrap-sprockets";
 
  .nav-sidebar > .active > a,
  .nav-sidebar > .active > a:hover,
